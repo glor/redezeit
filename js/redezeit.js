@@ -1,6 +1,6 @@
 function processTimeStep(state) {
     var currentKey = state.current_key;
-    $("#timeline").append(currentKey.toUpperCase() + " ");
+    $("#timeline").prepend(currentKey.toUpperCase() + " ");
     state.history.push(currentKey);
     state.registered_keys[currentKey].count += 1;
     updateTable(state);
